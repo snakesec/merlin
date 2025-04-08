@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /opt/ANDRAX/merlinc2
+
+/opt/ANDRAX/merlinc2/merlin-server "$@"
