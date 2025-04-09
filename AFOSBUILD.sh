@@ -2,17 +2,6 @@ rm -rf /opt/ANDRAX/merlinc2
 
 mkdir -p /opt/ANDRAX/merlinc2/agents
 
-git clone https://gitlab.com/snake-security/merlin-agent merlin-agent
-
-if [ $? -eq 0 ]
-then
-  # Result is OK! Just continue...
-  echo "Download agent... PASS!"
-else
-  # houston we have a problem
-  exit 1
-fi
-
 cd merlin-agent
 
 make all
@@ -144,6 +133,3 @@ fi
 cd ../
 
 cp -Rf andraxbin/* /opt/ANDRAX/bin
-
-chown -R andrax:andrax /opt/ANDRAX
-chmod -R 755 /opt/ANDRAX
